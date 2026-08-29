@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIGITAL ARCHITECT — разработка сайтов и приложений</title>
-    <meta name="description" content="DIGITAL ARCHITECT — разработка веб-приложений, сайтов и игр. Python, C#, C++, Angular, PHP. Проекты и контакты.">
+    <title>DIGITAL ARCHITECT — разработка сайтов, приложений и игр</title>
+    <meta name="description" content="DIGITAL ARCHITECT — студия разработки. Строим сайты, веб-приложения и игры: от прототипа до деплоя на свой сервер. Web, Backend, Games, Infrastructure.">
+    <meta property="og:title" content="DIGITAL ARCHITECT — разработка сайтов, приложений и игр">
+    <meta property="og:description" content="Строим сайты, веб-приложения и игры. Превращаем идеи в работающие цифровые продукты: от прототипа до сервера.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://digitalarchitect-dev.github.io/">
+    <meta property="og:image" content="https://digitalarchitect-dev.github.io/assets/logo-square.png">
+    <meta name="theme-color" content="#100b07">
     <link rel="icon" type="image/png" href="assets/logo-square.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,10 +41,11 @@
                 <img src="assets/logo-square.png" alt="" class="hero-logo">
                 <p class="hero-kicker">// digital architect</p>
                 <h1 class="hero-title">DIGITAL <span class="accent">ARCHITECT</span></h1>
-                <p class="hero-sub">Строим сайты, веб-приложения и игры. Разрабатываем от идеи до готового продукта: frontend, backend, серверы и деплой.</p>
+                <p class="hero-sub">Превращаем идеи в работающие цифровые продукты: сайты, веб-приложения и игры. От первого прототипа до собственного сервера.</p>
+                <p class="hero-fields">Web · Backend · Games · Infrastructure</p>
                 <div class="hero-actions">
-                    <a href="#projects" class="btn btn-primary">Наши проекты</a>
-                    <a href="#contact" class="btn btn-outline">Связаться</a>
+                    <a href="#contact" class="btn btn-primary">Заказать разработку</a>
+                    <a href="#projects" class="btn btn-outline">Наши проекты</a>
                 </div>
                 <div class="hero-socials">
                     <a href="https://github.com/stepaandgddev" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
@@ -60,7 +67,7 @@
             </div>
         </section>
 
-        <section id="projects" class="section">
+        <section id="projects" class="section reveal">
             <div class="container">
                 <p class="section-kicker">// projects</p>
                 <div class="projects-list">
@@ -75,8 +82,8 @@
                     <div class="proj-row">
                         <span class="proj-num">02</span>
                         <div class="proj-body">
-                            <h3 class="proj-name">Practikum</h3>
-                            <p class="proj-desc">Платформа для онлайн-курсов: лекции, домашние задания, прогресс и админка.</p>
+                            <h3 class="proj-name">Practikum <span class="proj-badge">IN DEVELOPMENT</span></h3>
+                            <p class="proj-desc">Платформа для онлайн-курсов: лекции, домашние задания, прогресс и админка. Скоро открываем.</p>
                         </div>
                     </div>
                     <a href="https://nsk.jetcode.org/practicum/projects/3548" target="_blank" rel="noopener" class="proj-row">
@@ -99,62 +106,71 @@
             </div>
         </section>
 
-        <section id="about" class="section">
+        <section id="about" class="section reveal">
             <div class="container">
                 <p class="section-kicker">// about</p>
                 <div class="about-grid">
                     <div class="about-text">
-                        <p><span class="accent">DIGITAL ARCHITECT</span> — команда и студия разработки. Основной стек — Python (Flask), Angular и PHP, плюс C# и C++ для десктопа и игр (Unity, Unreal).</p>
-                        <p>Любим доводить вещи до конца: не просто «работает», а удобно и аккуратно. Поднимаем и настраиваем серверы, разворачиваем Docker-контейнеры.</p>
+                        <p><span class="accent">DIGITAL ARCHITECT</span> — студия разработки, которой управляет <span class="accent">Степа</span>. Основной стек — Python (Flask), Angular и PHP, плюс C# и C++ для десктопа и игр (Unity, Unreal).</p>
+                        <p>Любим доводить вещи до конца: не просто «работает», а удобно и аккуратно. Поднимаем и настраиваем серверы, разворачиваем Docker-контейнеры, доводим проект до деплоя на своё железо.</p>
+                        <p>Личные аккаунты — <span class="mono">stepaandgd</span> / <span class="mono">stepaandgddev</span>, туда же можно писать по любым вопросам.</p>
                         <a href="#contact" class="btn btn-primary">Обсудить проект →</a>
                     </div>
                     <ul class="about-list">
-                        <li><span class="list-label">Backend</span>Python · Flask · PHP · Node-стек</li>
-                        <li><span class="list-label">Frontend</span>Angular · HTML/CSS/JS</li>
-                        <li><span class="list-label">Games</span>Unity · Unreal Engine · PyGame</li>
+                        <li><span class="list-label">Web</span>Angular · HTML/CSS/JS · PHP · Node-стек</li>
+                        <li><span class="list-label">Backend</span>Python · Flask · PHP · Docker</li>
+                        <li><span class="list-label">Games</span>Unity · Unreal Engine · C# · PyGame</li>
                         <li><span class="list-label">Desktop</span>C# .NET · C++ (QT)</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="section">
+        <section id="skills" class="section reveal">
             <div class="container">
                 <p class="section-kicker">// services</p>
-                <div class="skills-list">
-                    <div class="skill-item">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-detail">Flask · PyGame · PyQT · Telethon</span>
+                <div class="skills-cols">
+                    <div class="skill-col">
+                        <h3 class="skill-cat">Web</h3>
+                        <ul class="skill-tags">
+                            <li>Angular</li>
+                            <li>HTML / CSS / JS</li>
+                            <li>PHP</li>
+                            <li>Node-стек</li>
+                        </ul>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-name">C#</span>
-                        <span class="skill-detail">.NET · Unity</span>
+                    <div class="skill-col">
+                        <h3 class="skill-cat">Games</h3>
+                        <ul class="skill-tags">
+                            <li>Unity</li>
+                            <li>Unreal Engine</li>
+                            <li>C# / C++</li>
+                            <li>PyGame</li>
+                        </ul>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-name">C++</span>
-                        <span class="skill-detail">QT · Unreal Engine</span>
+                    <div class="skill-col">
+                        <h3 class="skill-cat">Infrastructure</h3>
+                        <ul class="skill-tags">
+                            <li>Docker</li>
+                            <li>Linux</li>
+                            <li>Серверы</li>
+                            <li>Deployment</li>
+                        </ul>
                     </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Angular</span>
-                        <span class="skill-detail">веб-фреймворк</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">PHP</span>
-                        <span class="skill-detail">backend</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Docker</span>
-                        <span class="skill-detail">контейнеры</span>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-name">Linux</span>
-                        <span class="skill-detail">EndeavourOS в работе, серверы на Debian (Intel NUC)</span>
+                </div>
+                <div class="infra-box">
+                    <span class="mono">// infrastructure</span>
+                    <div class="infra-grid">
+                        <span><em>OS</em> EndeavourOS</span>
+                        <span><em>Servers</em> Debian</span>
+                        <span><em>Hardware</em> Intel NUC</span>
+                        <span><em>Deploy</em> Docker</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section contact-section">
+        <section id="contact" class="section contact-section reveal">
             <div class="container contact-inner">
                 <p class="section-kicker">// contact</p>
                 <p class="contact-sub">Ниже самые быстрые способы с нами связаться.</p>

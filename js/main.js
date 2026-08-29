@@ -2,6 +2,18 @@
     var year = document.getElementById('year');
     if (year) year.textContent = new Date().getFullYear();
 
+    if ('IntersectionObserver' in window) {
+        var revealEls = document.querySelectorAll('.reveal');
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+    }
+
     var burger = document.getElementById('burger');
     var menu = document.querySelector('.menu');
     if (burger && menu) {

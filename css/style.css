@@ -23,10 +23,14 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
 a { color: inherit; text-decoration: none; }
 
 .accent { color: var(--accent); }
 .muted { color: var(--muted); font-weight: 400; font-size: 0.9em; }
+.mono { font-family: 'JetBrains Mono', monospace; }
 
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 .nav {
@@ -92,7 +96,8 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-kicker { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 0.95rem; margin-bottom: 14px; }
 .hero-title { font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
-.hero-sub { margin: 20px auto 0; color: var(--muted); font-size: 1.1rem; max-width: 560px; }
+.hero-sub { margin: 20px auto 0; color: var(--muted); font-size: 1.1rem; max-width: 600px; }
+.hero-fields { margin-top: 18px; font-family: 'JetBrains Mono', monospace; color: var(--accent); font-weight: 600; letter-spacing: 0.02em; }
 .hero-actions { margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .hero-socials { margin-top: 38px; display: flex; gap: 16px; justify-content: center; }
 .hero-socials a {
@@ -147,6 +152,19 @@ a.proj-row:hover { background: var(--card); padding-left: 18px; }
 }
 .proj-body { flex: 1; }
 .proj-name { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+.proj-badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    border: 1px solid var(--accent-dim);
+    background: var(--accent-dim);
+    padding: 3px 9px;
+    border-radius: 20px;
+    vertical-align: middle;
+    margin-left: 8px;
+}
 .proj-desc { color: var(--muted); font-size: 0.95rem; max-width: 620px; }
 .proj-arrow { color: var(--accent); font-size: 1.2rem; opacity: 0; transition: 0.2s; }
 a.proj-row:hover .proj-arrow { opacity: 1; }
@@ -162,17 +180,26 @@ a.proj-row:hover .proj-arrow { opacity: 1; }
     font-size: 0.9rem;
     margin-bottom: 2px;
 }
-.skills-list { display: flex; flex-direction: column; }
-.skill-item {
-    display: flex;
-    align-items: baseline;
-    gap: 24px;
-    padding: 13px 6px;
-    border-bottom: 1px dashed var(--border);
+.skills-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+.skill-cat { font-size: 1.05rem; font-weight: 700; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+.skill-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-tags li {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-size: 0.9rem;
 }
-.skill-item:last-child { border-bottom: none; }
-.skill-name { font-weight: 700; font-size: 1.05rem; min-width: 110px; }
-.skill-detail { color: var(--muted); font-size: 0.95rem; }
+.infra-box {
+    background: var(--bg-soft);
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    font-family: 'JetBrains Mono', monospace;
+}
+.infra-box > .mono { color: var(--accent); font-weight: 600; }
+.infra-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; color: var(--muted); font-size: 0.9rem; }
+.infra-grid em { font-style: normal; color: var(--text); margin-right: 6px; }
 .contact-section { border-top: 1px solid var(--border); }
 .contact-inner { text-align: center; }
 .contact-sub { color: var(--muted); font-size: 1.05rem; margin-bottom: 34px; }
@@ -197,6 +224,8 @@ a.proj-row:hover .proj-arrow { opacity: 1; }
 .footer-links a:hover { color: var(--accent); }
 @media (max-width: 900px) {
     .about-grid { grid-template-columns: 1fr; gap: 34px; }
+    .skills-cols { grid-template-columns: 1fr; gap: 18px; }
+    .infra-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
 }
 @media (max-width: 720px) {
     .menu {
@@ -216,6 +245,4 @@ a.proj-row:hover .proj-arrow { opacity: 1; }
     .burger { display: flex; }
     .proj-row { flex-direction: column; gap: 8px; align-items: flex-start; }
     .proj-num { width: auto; }
-    .skill-item { flex-direction: column; gap: 2px; }
-    .skill-name { min-width: 0; }
 }
